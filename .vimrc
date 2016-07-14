@@ -7,7 +7,16 @@ set nocompatible
 " and for plugins that are filetype specific.
 filetype indent plugin on
 
-" FORTRAN STUFF
+" On pressing tab, insert spaces
+set expandtab
+
+" Number of spaces inserted pressing tab
+set tabstop=4
+
+" When indenting, use 4 space width
+set shiftwidth=4
+
+" FORTRAN90 STUFF
 let fortran_free_source=1
 let fortran_have_tabs=1
 let fortran_more_precise=1
@@ -32,10 +41,6 @@ set hlsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
-
-" When opening a new line and no filetype-specific indenting is enabled, keep
-" the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
 
 " Display the cursor position on the last line of the screen or in the status
 " line of a window
