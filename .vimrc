@@ -13,6 +13,9 @@ set expandtab
 " Number of spaces inserted pressing tab
 set tabstop=4
 
+" Prevent the line from breaking
+set tw=0
+
 " When indenting, use 4 space width
 set shiftwidth=4
 
