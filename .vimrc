@@ -19,6 +19,12 @@ set tw=0
 " When indenting, use 4 space width
 set shiftwidth=4
 
+" split below
+set splitbelow
+
+" vsplit on right side
+set splitright
+
 " FORTRAN90 STUFF
 let fortran_free_source=1
 let fortran_have_tabs=1
@@ -27,6 +33,9 @@ let fortran_do_enddo=1
 
 " Enable syntax highlighting
 syntax on
+
+" Enable cpp syntax for exotic implementation files
+autocmd BufNewFile,BufRead *.ipp set syntax=cpp
 
 " Set highlighting to be suitable for a black background
 set background=dark
@@ -69,3 +78,10 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+"" Autocompletes parentheses
+"ino ( ()<left>
+"ino [ []<left>
+"ino { {}<left>
+"ino {<CR> {<CR>}<ESC>O
+"ino {;<CR> {<CR>};<ESC>O
+"
